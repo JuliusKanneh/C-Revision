@@ -27,7 +27,9 @@ int main() {
     forget, and getting it wrong can lead to subtle buffer overflow errors that can be difficult to reproduce.
     */
 
-    operators_demo();
+    // operators_demo();
+
+    arrays_and_strings_demo();
     
     return 0;
 
