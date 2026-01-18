@@ -1,5 +1,21 @@
 #include <stdio.h>
 #include "functions.h"
+#include <stdarg.h>
+
+void func_variable_list_args(int n_args, ...){
+    printf("Function with variable list arguments called...\n");
+    // Implementation would go here
+    printf("Number of arguments: %d\n", n_args);
+    va_list args;
+    va_start(args, n_args);
+    for (int i = 0; i < n_args; i++)
+    {
+        int number_entered = va_arg(args, int);
+        printf("First argument as integer: %d\n", number_entered);
+    }
+    
+    va_end(args);
+}
 
 int main() {
     // TODO: Uncomment to test Cmake setup
@@ -29,7 +45,9 @@ int main() {
 
     // operators_demo();
 
-    arrays_and_strings_demo();
+    // arrays_and_strings_demo();
+
+    func_variable_list_args(3, 8, 2, 8);
     
     return 0;
 

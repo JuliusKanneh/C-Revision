@@ -16,3 +16,4 @@ and prints it to standard output.
 
 char* get_message();
 void draw_line(int buf_size, char fill_char);
+void func_variable_list_args(int n_args, ...);
