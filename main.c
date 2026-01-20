@@ -47,7 +47,9 @@ int main() {
 
     // arrays_and_strings_demo();
 
-    func_variable_list_args(3, 8, 2, 8);
+    // func_variable_list_args(3, 8, 2, 8);
+
+    linked_list_demo();
     
     return 0;
 
