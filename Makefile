@@ -2,9 +2,9 @@ CFLAGS = -Wno-implicit-function-declaration
 
 all: final
 	
-final: program1.o main.o operators.o arrays_and_strings.o
+final: program1.o main.o operators.o arrays_and_strings.o data_structure/linked_list.o 
 	@echo "Linking object files"
-	gcc $(CFLAGS) program1.o main.o operators.o arrays_and_strings.o -o final
+	gcc $(CFLAGS) program1.o main.o operators.o arrays_and_strings.o data_structure/linked_list.o -o final
 
 program1.o: program1.c
 	@echo "Compiling program1.c"
@@ -22,6 +22,10 @@ arrays_and_strings.o: arrays_and_strings.c
 	@echo "Compiling arrays_and_strings.c"
 	gcc $(CFLAGS) -c arrays_and_strings.c
 
+data_structure/linked_list.o: data_structure/linked_list.c
+	@echo "Compiling data_structure/linked_list.c"
+	gcc $(CFLAGS) -c data_structure/linked_list.c -o data_structure/linked_list.o
+
 clean: 
 	@echo "Removing everything but the source files"
-	rm -f *.o final
+	rm -f *.o data_structure/*.o final
